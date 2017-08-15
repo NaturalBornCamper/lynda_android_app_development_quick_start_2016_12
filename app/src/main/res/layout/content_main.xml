@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.naturalborncamper.diceout.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -12,37 +13,38 @@
         android:id="@+id/rollResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's roll bitches"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="82dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="82dp"
+        android:text="Let's roll bitches"
+        android:textColor="@android:color/white" />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
         android:id="@+id/dice1Image"
-        android:layout_below="@id/rollResult"
-        android:layout_marginTop="25dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentLeft="true"
+        android:layout_below="@id/rollResult"
+        android:layout_marginTop="25dp"
         android:src="@drawable/dice1" />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
         android:id="@+id/dice2Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@id/rollResult"
-        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
         android:src="@drawable/dice1" />
 
     <ImageView
+        android:id="@+id/dice3Image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/dice3Image"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/rollResult"
         android:layout_marginTop="25dp"
-        android:layout_alignParentRight="true"
         android:src="@drawable/dice1" />
 
     <TextView
@@ -53,5 +55,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
         android:text="score: 0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/white" />
 </RelativeLayout>
