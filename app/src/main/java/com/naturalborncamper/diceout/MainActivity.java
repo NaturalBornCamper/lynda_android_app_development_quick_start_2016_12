@@ -23,7 +23,6 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     TextView rollResult, scoreText;
-    Button rollButton;
 
     // Field to hold the score
     int score;
@@ -46,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                rollDice(view);
             }
         });
 
@@ -56,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
         rollResult = (TextView) findViewById(R.id.rollResult);
         scoreText = (TextView) findViewById(R.id.scoreText);
-        rollButton = (Button) findViewById(R.id.rollButton);
         ImageView diceImage1 = (ImageView) findViewById(R.id.dice1Image);
         ImageView diceImage2 = (ImageView) findViewById(R.id.dice2Image);
         ImageView diceImage3 = (ImageView) findViewById(R.id.dice3Image);
