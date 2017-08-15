@@ -22,7 +22,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView rollResult;
+    TextView rollResult, scoreText;
     Button rollButton;
 
     // Field to hold the score
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         this.score = 0;
 
         rollResult = (TextView) findViewById(R.id.rollResult);
+        scoreText = (TextView) findViewById(R.id.scoreText);
         rollButton = (Button) findViewById(R.id.rollButton);
         ImageView diceImage1 = (ImageView) findViewById(R.id.dice1Image);
         ImageView diceImage2 = (ImageView) findViewById(R.id.dice2Image);
