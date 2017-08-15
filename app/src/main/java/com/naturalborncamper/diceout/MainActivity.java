@@ -98,7 +98,24 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        String msg = "You rolled a " + dice1 + ", " + dice2 + " and " + dice3;
+        String msg;
+
+        if (dice1 == dice2 && dice2 == dice3)
+        {
+            int scoreDelta = dice1*100;
+            msg = "You scored a triple " + dice1 + "! You score" + scoreDelta + " points!";
+            score += scoreDelta;
+        }
+        else if (dice1 == dice2 || dice1 == dice3 || dice2 == dice3)
+        {
+            msg = "You rolled doubles for 50 points!";
+            score += 50;
+        }
+        else
+            msg = "You suck, try again loser";
+
+        scoreText.setText("Score: " + score);
+
         rollResult.setText(msg);
     }
 
